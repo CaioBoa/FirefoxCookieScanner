@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy and Security Detector</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 10px;
+      width: 300px;
+      background-color: #f4f4f4;
+    }
+    h2 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .no-data {
+      font-size: 14px;
+      color: #999;
+      text-align: center;
+      padding: 10px;
+    }
+    #risk-score {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0;
+    }
+    /* Inicialmente escondemos a seção de detalhes */
+    #details {
+      display: none;
+    }
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Site Security Risk</h2>
+  <div id="risk-score">Calculating...</div>
+
+  <!-- Botão para ver detalhes -->
+  <button id="show-details-button">Details</button>
+
+  <!-- Seção de detalhes, escondida inicialmente -->
+  <div id="details">
+    <h2>Third-Party Connections</h2>
+    <ul id="third-party-list" class="no-data">Loading...</ul>
+
+    <h2>Cookies</h2>
+    <table id="cookie-list">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Session/Persistent</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="3">Loading...</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Local Storage</h2>
+    <table id="local-storage-list">
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2">Loading...</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Canvas Fingerprinting</h2>
+    <p id="canvas-fingerprinting">Loading...</p>
+
+    <h2>Hijacking Detection</h2>
+    <p id="hijacking">Loading...</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
+
+
+
+
+
